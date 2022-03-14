@@ -3,15 +3,15 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Booki - Trouvez votre hébérgement pour des vacances de rêve</title>
+    <title>OhMyFood - Trouvez le restaurant qui vous convient</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' href='css/normalize.css'>
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,700;1,100&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/7950789677.js" crossorigin="anonymous"></script>
 
@@ -22,20 +22,26 @@
         <div class="container">
             <header>
                 <!-- logo oh my food et futur bouton retour -->
-                <a href="#"><img src="" alt="Logo OhMyFood"></a>
+                <a href="#"><img src="img/logo/ohmyfood@2x.svg" alt="Logo OhMyFood"></a>
             </header>
 
             <section id="search">
-                <!-- icon + formulaire géoloc --> 
-                <!--inclure malentendants
-                    h1 obligatoire dans section ?-  -->
+                <!-- method="post" action="#" à la charge de l'intégrateur
+                <form class="formulaire">
+                    <i class="dot fa-solid fa-location-dot" id="dot"></i>
+                    <label for="ville">Rechercher une ville</label>
+                    <input type="search" name="ville" id="ville" value="Paris, Belleville">
+                    <button type="submit" id="rechercher"><i class="fa-solid fa-magnifying-glass"></i><span>Rechercher</span></button>
+                </form> -->
+
+                <i class="fa-solid fa-location-dot"></i>
+                <h2>Paris, Belleville</h2>
             </section>
 
             <section id="presentation">
-    <!-- H2 + p + bouton explorer -->
-                <h2>Réservez le menu qui vous convient</h2>
+                <h1>Réservez le menu qui vous convient</h1>
                 <p>Découvrez des restaurants d'exception, séléctionés par nos soins.</p>
-                <a href="#" class="button-a"><h3>Explorer nos restaurants</h3></a>
+                <a href="#restaurants" class="button-a"><h3>Explorer nos restaurants</h3></a>
             </section>
 
             <section id="how-to">
@@ -48,17 +54,17 @@
                     <li>
                         <p class="round-border">1</p>
                         <i class="fa-solid fa-money-bill-wave"></i>
-                        <h3 class="rectangle-button">Choisissez un restaurant</h3>
+                        <p class="rectangle-button">Choisissez un restaurant</p>
                     </li>
                     <li>
                         <p class="round-border">2</p>
                         <i class="fa-solid fa-money-bill-wave"></i>
-                        <h3 class="rectangle-button">Composez votre menu</h3>
+                        <p class="rectangle-button">Composez votre menu</p>
                     </li>
                     <li>
                         <p class="round-border">3</p>
                         <i class="fa-solid fa-money-bill-wave"></i>
-                        <h3 class="rectangle-button">Dégustez au restaurant</h3>
+                        <p class="rectangle-button">Dégustez au restaurant</p>
                     </li>
                 </ul>
             </section>
@@ -70,22 +76,22 @@
                     article > a > div > img
                     card desc + like-button
                 -->
+
                 <!-- <h2>Restaurants</h2> -->
 
                 <article>
                     <a href="#" class="full-size">
-                        <img src="img/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Un plat du restaurant">
+                        <p class="new">Nouveau</p>
+                        <img src="img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Un plat du restaurant">
                         <div class="card">
                             <div class="desc">
                                 <h4>La note enchantée</h4>
                                 <p>Charonne</p>
                             </div>
+                            <i class="fa-regular fa-heart"></i>
                         </div>
-                    </a>
-                <!-- <div class="like">
-                    <a href="222" class="heart"><i class="fa-solid fa-money-bill-wave"></i></a>
-                </div> -->
-        </article>
+                    </a>        
+                </article>
 
 
                 
@@ -94,9 +100,15 @@
         </div>
 
         <footer>
-            <!-- 
-                logo + 4 ul li
-            -->
+            <div class="container">
+                <img src="img/logo/ohmyfood@2x.svg" alt="Logo OhMyFood">
+                <ul>
+                    <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
+                    <li><i class="fa-solid fa-handshake-angle"></i>Devenir Partenaire</li>
+                    <li>Mention légales</li>
+                    <li><a href="mailto:contact@ohmyfood.fr">Contact</a></li>
+                </ul>
+            </div>
         </footer>
     </body>
 </html>
