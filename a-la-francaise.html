@@ -46,35 +46,127 @@
 			/> -->
 		</div>
 
+		
+
 		<section id="menu">
 			<div class="container">
 				<header>
 					<h1>A la française</h1>
 					<i class="fa-regular fa-heart"></i>
 				</header>
-				<article class="cat">
-					<h3>Entrées</h3>
-					<div class="item">
-						<h4>Tartare de poulpe acidulé</h4>
-						<p>Aux Zestes d'orange</p>
-						<p>25€</p>
-					</div>
-					<div class="item">
-						<h4>Tartare de poulpe acidulé</h4>
-						<p>Aux Zestes d'orange</p>
-						<p>25€</p>
-					</div>
-					<div class="item">
-						<h4>Tartare de poulpe acidulé</h4>
-						<p>Aux Zestes d'orange</p>
-						<p>25€</p>
-					</div>
-				</article>
-				<a href="#restaurants" class="button-a shadow">Commander</a>
+                    
+					<form class="form">
+					<!-- method="post" action="#" à la charge de l'intégrateur -->
+						<fieldset class="form-cat">
+							<legend>
+								<h3>Entrées</h3>
+								<span class="green-underline"></span>
+							</legend>
+                        <input type="checkbox" name="ville" id="tartare">
+							<label for="tartare">
+								<span class="item shadow">
+									<span class="dish">Tartare de poulpe acidulé</span>
+									<span class="side_dish">Aux Zestes d'orange</span>
+									<span class="price">25€</span>
+								</span>
+							</label>
+
+							<input type="checkbox" name="ville" id="veloute">
+							<label for="veloute">
+								<span class="item shadow">
+									<span class="dish">Velouté de légumes d'antan</span>
+									<span class="side_dish">Carotte, panais, topinambour</span>
+									<span class="price">35€</span>
+								</span>
+							</label>
+
+							<input type="checkbox" name="ville" id="soupe">
+							<label for="soupe">
+								<span class="item shadow">
+									<span class="dish">Soupe à l'oignon</span>
+									<span class="side_dish">Revisitée</span>
+									<span class="price">20€</span>
+								</span>
+							</label>
+						</fieldset>
+
+						<!-- PLATS -->
+
+						<fieldset class="form-cat">
+							<legend>
+								<h3>Plats</h3>
+								<span class="green-underline"></span>
+							</legend>
+                        <input type="checkbox" name="ville" id="stjacques">
+							<label for="stjacques">
+								<span class="item shadow">
+									<span class="dish">Coquilles Saint-Jacques</span>
+									<span class="side_dish">Accompagnées d'une purée de panais</span>
+									<span class="price">40€</span>
+								</span>
+							</label>
+
+							<input type="checkbox" name="ville" id="magret">
+							<label for="magret">
+								<span class="item shadow">
+									<span class="dish">Magret de canard</span>
+									<span class="side_dish">Et parmentier de pommes de terres</span>
+									<span class="price">35€</span>
+								</span>
+							</label>
+
+							<input type="checkbox" name="ville" id="pigeonneau">
+							<label for="pigeonneau">
+								<span class="item shadow">
+									<span class="dish">Pigeonneau d'Ille-et-Vilaine</span>
+									<span class="side_dish">Sur son lit de gnocchis aux légumes</span>
+									<span class="price">44€</span>
+								</span>
+							</label>
+						</fieldset>
+
+						<!-- DESSERTS -->
+
+						<fieldset class="form-cat">
+							<legend>
+								<h3>Desserts</h3>
+								<span class="green-underline"></span>
+							</legend>
+                        <input type="checkbox" name="ville" id="violette">
+							<label for="violette">
+								<span class="item shadow">
+									<span class="dish">Pétales de violettes glacés</span>
+									<span class="side_dish">Et purée de noisettes</span>
+									<span class="price">18€</span>
+								</span>
+							</label>
+
+							<input type="checkbox" name="ville" id="fondant">
+							<label for="fondant">
+								<span class="item shadow">
+									<span class="dish">Fondant au chocolat</span>
+									<span class="side_dish">Revisité</span>
+									<span class="price">22€</span>
+								</span>
+							</label>
+
+							<input type="checkbox" name="ville" id="millefeuille">
+							<label for="millefeuille">
+								<span class="item shadow">
+									<span class="dish">Millefeuille croustillant</span>
+									<span class="side_dish">Myrtilles et pâte d'amande</span>
+									<span class="price">23€</span>
+								</span>
+							</label>
+						</fieldset>
+
+						<button type="submit" id="order" class="button-a shadow">Commander</button>
+                    </form>
 			</div>
 		</section>
 
 		<footer>
+			<div class="puzzle"></div>
 			<div class="container">
 				<nav>
 					<img src="img/logo/ohmyfood@2x.svg" alt="Logo OhMyFood" />
