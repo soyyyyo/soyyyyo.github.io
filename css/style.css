@@ -23,6 +23,7 @@ body
 h1 {
 	/* font-family: 'Shrikhand', cursive; */
 	font-size: 2.5rem;
+	font-weight: normal;
 }
 
 img {
@@ -172,6 +173,9 @@ header nav {
 	border-radius: 25px;
 	background: linear-gradient(to bottom right, #ff79da, #9356dc);
 	width: 260px;
+	text-align: center;
+	font-size: 2rem;
+	margin: auto;
 }
 
 /* HOW TO ---------------- */
@@ -235,7 +239,7 @@ header nav {
 #restaurants h2 {
 }
 
-article {
+#restaurants article {
 	width: 100%;
 	height: 280px;
 	display: flex;
@@ -328,3 +332,62 @@ footer .fa-solid {
 	font-size: 1.4rem;
 	width: 1rem;
 }
+
+/* RESTAURANTS PAGES */
+
+#menu .container {
+	padding-top: 0px;
+	display: flex;
+	flex-direction: column;
+	align-content: space-between;
+	gap: 10px;
+}
+
+#menu header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#menu h1 {
+	font-family: "Shrikhand", cursive;
+	font-size: 3.5rem;
+	padding: 30px 0;
+}
+
+#menu .fa-heart {
+	font-size: 3.5rem;
+}
+
+.cat {
+	display: flex;
+	border: 1px blue solid;
+	flex-direction: column;
+	align-content: space-between;
+	gap: 10px;
+	width: 100%;
+}
+
+.item {
+	border-radius: 15px;
+	display: flex;
+	border: 1px red solid;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 15px 15px;
+}
+
+.item h4 {
+	width: 100%;
+}
+
+/* div background image */
+/* checkbox  */
+/* label fait la place de l'article
+ */
+
+/* 
+ respire
+ decalage en bas
+ ligne grise hors container */
