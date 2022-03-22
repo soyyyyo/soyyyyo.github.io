@@ -32,7 +32,7 @@
 		<header>
 			<!-- logo oh my food et futur bouton retour -->
 			<nav>
-				<a href="retour.html"><i class="fa-solid fa-arrow-left back"></i></a>
+				<a href="retour.html"><i class="fa-solid fa-arrow-left back hidden"></i></a>
 				<a href="logo.html"
 					><img src="img/logo/ohmyfood@2x.svg" alt="Logo OhMyFood"
 				/></a>
@@ -49,7 +49,7 @@
                         <input type="search" name="ville" id="ville" value="Paris, Belleville">
                         <button type="submit" id="rechercher"><i class="fa-solid fa-magnifying-glass"></i><span>Rechercher</span></button>
                     </form> -->
-					<p><i class="fa-solid fa-location-dot"></i>Paris, Belleville</p>
+					<p><i class="fa-solid fa-location-dot search__dot"></i>Paris, Belleville</p>
 				</div>
 			</section>
 
@@ -59,10 +59,10 @@
 			<section id="presentation">
 				<div class="container">
 					<h1>Réservez le menu qui vous convient</h1>
-					<p class="light">
+					<p class="light-weight">
 						Découvrez des restaurants d'exception, séléctionnés par nos soins.
 					</p>
-					<a href="#restaurants" class="button-a shadow"
+					<a href="#restaurants" class="button-purple shadow"
 						><p>Explorer nos restaurants</p></a
 					>
 				</div>
@@ -100,71 +100,75 @@
                         card desc + like-button
                     -->
 					<h2>Restaurants</h2>
-					<div class="cards">
-						<article class="shadow">
+					<div class="restaurants__cards">
+						<article class="shadow article__card">
 							<a href="#" class="full-size">
-								<p class="new">Nouveau</p>
+								<p class="button-new">Nouveau</p>
 								<img
 									src="img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
 									alt="Un plat du restaurant"
+									class="article__image"
 								/>
-								<div class="card">
-									<div class="desc">
+								<div class="article__bottom">
+									<div class="article__desc">
 										<h4>La palette du gôut</h4>
-										<p class="light">Ménilmontant</p>
+										<p class="light-weight">Ménilmontant</p>
 									</div>
-									<i class="fa-regular fa-heart"></i>
+									<i class="fa-regular fa-heart article__heart"></i>
 								</div>
 							</a>
 						</article>
 
-						<article class="shadow">
+						<article class="shadow article__card">
 							<a href="#" class="full-size">
-								<p class="new">Nouveau</p>
+								<p class="button-new">Nouveau</p>
 								<img
 									src="img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
 									alt="Un plat du restaurant"
+									class="article__image"
 								/>
-								<div class="card">
-									<div class="desc">
+								<div class="article__bottom">
+									<div class="article__desc">
 										<h4>La note enchantée</h4>
-										<p class="light">Charonne</p>
+										<p class="light-weight">Charonne</p>
 									</div>
-									<i class="fa-regular fa-heart"></i>
+									<i class="fa-regular fa-heart article__heart"></i>
 								</div>
 							</a>
 						</article>
 
-						<article class="shadow">
+						<article class="shadow article__card">
 							<a href="#" class="full-size">
-								<p class="new">Nouveau</p>
+								<p class="button-new">Nouveau</p>
 								<img
 									src="img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
 									alt="Un plat du restaurant"
+									class="article__image"
 								/>
-								<div class="card">
-									<div class="desc">
+								<div class="article__bottom">
+									<div class="article__desc">
 										<h4>A la française</h4>
-										<p class="light">Cité Rouge</p>
+										<p class="light-weight">Cité Rouge</p>
 									</div>
-									<i class="fa-regular fa-heart"></i>
+									<i class="fa-regular fa-heart article__heart"></i>
 								</div>
 							</a>
 						</article>
 
-						<article class="shadow">
+						<article class="shadow article__card">
 							<a href="#" class="full-size">
-								<p class="new">Nouveau</p>
+								<p class="button-new">Nouveau</p>
 								<img
 									src="img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
 									alt="Un plat du restaurant"
+									class="article__image"
 								/>
-								<div class="card">
-									<div class="desc">
+								<div class="article__bottom">
+									<div class="article__desc">
 										<h4>Le délice des sens</h4>
-										<p class="light">Folie-Méricourt</p>
+										<p class="light-weight">Folie-Méricourt</p>
 									</div>
-									<i class="fa-regular fa-heart"></i>
+									<i class="fa-regular fa-heart article__heart"></i>
 								</div>
 							</a>
 						</article>
