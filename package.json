@@ -1,0 +1,23 @@
+{
+  "name": "joristeychene_3_14032022",
+  "version": "1.0.0",
+  "description": "3rd project for Open Class Room",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soyyyyo/JorisTeychene_3_14032022.git"
+  },
+  "keywords": [
+    "openclassrooms",
+    "ohmyfood"
+  ],
+  "author": "Joris Teychene",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soyyyyo/JorisTeychene_3_14032022/issues"
+  },
+  "homepage": "https://github.com/soyyyyo/JorisTeychene_3_14032022#readme"
+}

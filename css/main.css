@@ -1,0 +1,9 @@
+.test {
+  background-color: red;
+}
+
+.test .machin {
+  text-align: center;
+  list-style: none;
+  flex-direction: column;
+}
