@@ -201,6 +201,7 @@ footer .fa-solid {
   flex-direction: column;
   align-content: space-between;
   gap: 50px;
+  position: relative;
 }
 
 .form__cat {
@@ -211,16 +212,58 @@ footer .fa-solid {
   width: 100%;
   /* margin-top: 50px; */
   border: none;
+  position: relative;
 }
 
 .form__item {
   background-color: white;
   border-radius: 15px;
   display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+input[type="checkbox"]:checked + label .icon {
+  margin-right: 0px;
+}
+
+input[type="checkbox"]:checked + label .icon > i {
+  transform: rotate(360deg);
+  transition-duration: 0.5s;
+}
+
+.form__text {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
   padding: 15px 15px;
+}
+
+.icon {
+  background: lightgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  margin-right: -8rem;
+  transition-duration: 500ms;
+}
+
+.icon > i {
+  font-size: 3rem;
+  background: lightcoral;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.5s;
 }
 
 .dish {

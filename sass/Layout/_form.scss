@@ -3,6 +3,8 @@
   flex-direction: column;
   align-content: space-between;
   gap: 50px;
+  //tests
+  position: relative;
 }
 
 .form__cat {
@@ -13,17 +15,95 @@
   width: 100%;
   /* margin-top: 50px; */
   border: none;
+  // tests
+  position: relative;
 }
 
 .form__item {
   background-color: white;
   border-radius: 15px;
   display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  // padding: 15px 15px; avant icon
+  cursor: pointer;
+  overflow: hidden;
+}
+
+// .form__item:hover .icon {
+//   margin-right: 0px;
+// }
+
+// .form__item:hover .icon > i {
+//   transform: rotate(360deg);
+//   transition-duration: 0.5s;
+// }
+
+input[type="checkbox"]:checked + label .icon {
+  margin-right: 0px;
+}
+
+input[type="checkbox"]:checked + label .icon > i {
+  transform: rotate(360deg);
+  transition-duration: 0.5s;
+}
+
+.form__text {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
   padding: 15px 15px;
 }
+
+.icon {
+  background: lightgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  margin-right: -8rem;
+  transition-duration: 500ms;
+}
+
+.icon > i {
+  font-size: 3rem;
+  background: lightcoral;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.5s;
+}
+
+.form__item:hover {
+}
+
+span {
+}
+
+// .dish,
+// .side_dish {
+//   display: block;
+// }
+
+// pour les autres cartes non edites
+// .form__item {
+//   background-color: white;
+//   border-radius: 15px;
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding: 15px 15px;
+//   cursor: pointer;
+//   overflow: hidden;
+// }
 
 .dish {
   width: 100%;
