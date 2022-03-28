@@ -1,0 +1,26 @@
+.button-purple {
+  color: white;
+  background-color: #9356dc;
+  padding: 1.3rem 2rem;
+  border-radius: 25px;
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  width: 260px;
+  text-align: center;
+  font-size: 2rem;
+  margin: auto;
+  /* user agent */
+  border-style: none;
+  display: block;
+}
+
+.button-new {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #186350;
+  background-color: #99e2d0;
+  padding: 8px;
+  border-radius: 5px;
+  margin: 15px 15px 0 0;
+  font-size: 1.6rem;
+}
