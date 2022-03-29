@@ -1,9 +1,9 @@
 .button-purple {
   color: white;
-  background-color: #9356dc;
+  background-color: $clr-pri;
   padding: 1.3rem 2rem;
   border-radius: 25px;
-  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  background: linear-gradient(to bottom right, $clr-sec, $clr-pri);
   width: 260px;
   text-align: center;
   font-size: 2rem;
@@ -17,10 +17,43 @@
   position: absolute;
   top: 0;
   right: 0;
-  color: #186350;
+  color: $clr-ter;
   background-color: #99e2d0;
   padding: 8px;
   border-radius: 5px;
   margin: 15px 15px 0 0;
   font-size: 1.6rem;
+}
+
+#menu .fa-heart {
+  font-size: 3.5rem;
+  padding-right: 15px;
+}
+
+.heart {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  &--empty {
+    color: black;
+    position: relative;
+  }
+  &--full {
+    background: -webkit-linear-gradient(top, $clr-pri 30%, $clr-sec 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+  }
+  &__input {
+    position: absolute;
+    left: -9999px;
+    &:checked + label .heart--full {
+      opacity: 100;
+      transition-duration: 500ms;
+    }
+  }
 }
