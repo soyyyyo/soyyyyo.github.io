@@ -59,10 +59,6 @@ p {
   margin-block-start: 0px;
 }
 
-.fa-solid {
-  font-size: 2.2rem;
-}
-
 h1,
 h2,
 h3,
@@ -512,6 +508,7 @@ fieldset {
 #how-to .fa-solid {
   position: absolute;
   left: 10%;
+  font-size: 2.2rem;
 }
 
 #presentation {
@@ -545,6 +542,7 @@ fieldset {
 .search__dot {
   position: relative;
   right: 10px;
+  font-size: 2.2rem;
 }
 
 /* RESTAURANTS CARDS ---------------- */
@@ -606,6 +604,39 @@ a.full-size {
   padding-right: 30px;
   font-size: 2.6rem;
   cursor: default;
+}
+
+.spinner {
+  color: white;
+  z-index: 5;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: "";
+  font-size: 30rem;
+}
+
+.spinner .list {
+  opacity: 0.5;
+}
+
+.spinner .store {
+  opacity: 0.5;
+}
+
+@keyframes spinner {
+  0% {
+    visibility: visible;
+    background-color: red;
+  }
+  100% {
+    visibility: visible;
+    background-color: blue;
+  }
 }
 
 #menu {
