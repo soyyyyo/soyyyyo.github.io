@@ -290,7 +290,7 @@ footer .fa-solid {
 #menu .form__cat {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   width: 100%;
   /* margin-top: 50px; */
   border: none;
@@ -391,13 +391,6 @@ footer .fa-solid {
   margin-bottom: 23px;
 }
 
-.legend__underline {
-  position: absolute;
-  border-bottom: 4px #99e2d0 solid;
-  width: 50px;
-  bottom: 15px;
-}
-
 fieldset {
   padding-inline-start: 0;
   padding-inline-end: 0;
@@ -407,6 +400,99 @@ fieldset {
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
+}
+
+#menu .form__item {
+  animation: slow-appear 800ms backwards;
+}
+
+#menu .form__animation--1 {
+  animation-delay: 1000ms;
+}
+
+#menu .form__animation--2 {
+  animation-delay: 1300ms;
+}
+
+#menu .form__animation--3 {
+  animation-delay: 1600ms;
+}
+
+#menu .form__animation--4 {
+  animation-delay: 1900ms;
+}
+
+#menu .form__animation--5 {
+  animation-delay: 2200ms;
+}
+
+#menu .form__animation--6 {
+  animation-delay: 2500ms;
+}
+
+#menu .form__animation--7 {
+  animation-delay: 2800ms;
+}
+
+#menu .form__animation--8 {
+  animation-delay: 3100ms;
+}
+
+#menu .form__animation--9 {
+  animation-delay: 3400ms;
+}
+
+@keyframes slow-appear {
+  0% {
+    opacity: 0;
+    transform: translatey(20px) scale(0.8);
+  }
+  60% {
+    transform: translatey(-10px);
+    transform: perspective(300px) rotateX(-3deg);
+  }
+  80% {
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.legend__underline {
+  position: absolute;
+  border-bottom: 4px #99e2d0 solid;
+  width: 50px;
+  bottom: 15px;
+  animation: underline 2400ms ease-in-out backwards;
+}
+
+.legend .u--0 {
+  animation-delay: 0ms;
+}
+
+.legend .u--1 {
+  animation-delay: 1000ms;
+}
+
+.legend .u--2 {
+  animation-delay: 2000ms;
+}
+
+@keyframes underline {
+  0% {
+    width: 10px;
+  }
+  50% {
+    width: 120px;
+  }
+  90% {
+    width: 47px;
+  }
+  100% {
+    width: 50px;
+  }
 }
 
 /* HOW TO ---------------- */

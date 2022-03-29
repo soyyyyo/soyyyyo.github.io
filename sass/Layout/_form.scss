@@ -5,7 +5,7 @@
   &__cat {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     width: 100%;
     /* margin-top: 50px; */
     border: none;
@@ -89,12 +89,12 @@
     font-weight: 300;
     margin-bottom: 23px;
   }
-  &__underline {
-    position: absolute;
-    border-bottom: 4px $clr-ter solid;
-    width: 50px;
-    bottom: 15px;
-  }
+  // &__underline {
+  //   position: absolute;
+  //   border-bottom: 4px $clr-ter solid;
+  //   width: 50px;
+  //   bottom: 15px;
+  // }
 }
 
 fieldset {
@@ -106,4 +106,76 @@ fieldset {
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
+}
+
+// animation d'apparition successive
+
+$anim-pre-delay: 700ms;
+$anim-delay: 300ms;
+$anim-duration: 800ms;
+$anim-total: $anim-duration + $anim-pre-delay + ($anim-delay * 3);
+
+#menu .form {
+  &__item {
+    animation: slow-appear $anim-duration backwards;
+  }
+  &__animation {
+    @for $i from 1 to 10 {
+      &--#{$i} {
+        animation-delay: $anim-pre-delay + ($anim-delay * $i);
+      }
+    }
+  }
+}
+
+@keyframes slow-appear {
+  0% {
+    opacity: 0;
+    transform: translatey(20px) scale(0.8);
+  }
+  60% {
+    transform: translatey(-10px);
+    transform: perspective(300px) rotateX(-3deg);
+  }
+  80% {
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// animation des lignes vertes
+
+.legend {
+  &__underline {
+    position: absolute;
+    border-bottom: 4px $clr-ter solid;
+    width: 50px;
+    bottom: 15px;
+    animation: underline $anim-total ease-in-out backwards;
+  }
+  & .u {
+    @for $i from 0 to 3 {
+      &--#{$i} {
+        animation-delay: ($anim-total - ($anim-pre-delay * 2)) * $i;
+      }
+    }
+  }
+}
+
+@keyframes underline {
+  0% {
+    width: 10px;
+  }
+  50% {
+    width: 120px;
+  }
+  90% {
+    width: 47px;
+  }
+  100% {
+    width: 50px;
+  }
 }
