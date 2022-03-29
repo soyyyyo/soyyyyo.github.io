@@ -81,16 +81,11 @@ ul {
   padding-inline-start: 0px;
 }
 
-.container {
-  max-width: 768px;
-  margin: auto;
-  padding: 60px 15px 60px 15px;
-}
-
 section {
   /* padding: 40px 0; */
 }
 
+/* END GLOBAL ---------------- */
 .light-weight {
   font-weight: 300;
 }
@@ -103,7 +98,6 @@ section {
   display: none;
 }
 
-/* END GLOBAL ---------------- */
 .test {
   background-color: red;
 }
@@ -114,7 +108,7 @@ section {
   flex-direction: column;
 }
 
-.button-purple {
+.btn--main {
   color: white;
   background-color: #9356dc;
   padding: 1.3rem 2rem;
@@ -126,19 +120,55 @@ section {
   margin: auto;
   /* user agent */
   border-style: none;
-  display: block;
 }
 
-.button-new {
+.btn--round {
+  height: 3.5rem;
+  width: 3.5rem;
+  background-color: #9356dc;
+  color: white;
+  position: absolute;
+  left: -16px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: "";
+}
+
+.btn--rectangle {
+  width: 100%;
+  height: 80px;
+  border-radius: 20px;
+  background-color: whitesmoke;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: "";
+}
+
+.btn--new {
   position: absolute;
   top: 0;
   right: 0;
-  color: #99e2d0;
+  color: white;
   background-color: #99e2d0;
   padding: 8px;
   border-radius: 5px;
   margin: 15px 15px 0 0;
   font-size: 1.6rem;
+}
+
+.article__card {
+  position: relative;
+}
+
+.article__card .heart {
+  position: absolute;
+  bottom: 2.25rem;
+  right: 30px;
+  font-size: 3.5rem;
 }
 
 #menu .fa-heart {
@@ -148,9 +178,11 @@ section {
 
 .heart {
   position: relative;
+  line-height: 0;
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  line-height: "";
 }
 
 .heart--empty {
@@ -171,11 +203,21 @@ section {
 .heart__input {
   position: absolute;
   left: -9999px;
+  animation-direction: alternate;
 }
 
 .heart__input:checked + label .heart--full {
   opacity: 100;
   transition-duration: 500ms;
+}
+
+.heart__input:not(:checked) + label .heart--full {
+  opacity: 0;
+  transition-duration: 500ms;
+}
+
+.heart label {
+  height: min-content;
 }
 
 header img {
@@ -190,11 +232,17 @@ header nav {
   line-height: 0;
 }
 
-.back {
+header .btn--back {
   position: absolute;
   left: 32px;
   top: 32px;
   font-size: 3rem;
+}
+
+.container {
+  max-width: 768px;
+  margin: auto;
+  padding: 60px 15px 60px 15px;
 }
 
 /* FOOTER ---------------- */
@@ -267,7 +315,7 @@ footer .fa-solid {
   padding: 15px 15px;
 }
 
-.dish {
+#menu .form__dish {
   width: 100%;
   font-size: 2.1rem;
   font-weight: 600;
@@ -278,7 +326,7 @@ footer .fa-solid {
   overflow: hidden;
 }
 
-.side_dish {
+#menu .form__side_dish {
   max-width: 90%;
   font-size: 2rem;
   font-weight: 300;
@@ -289,23 +337,9 @@ footer .fa-solid {
   overflow: hidden;
 }
 
-.price {
-  font-weight: 600;
+#menu .form__price {
   font-size: 2rem;
   font-weight: 300;
-}
-
-.form input {
-  position: absolute;
-  left: -9999px;
-}
-
-.form input[type="checkbox"]:checked + label .icon {
-  margin-right: 0px;
-}
-
-.form input[type="checkbox"]:checked + label .icon > i {
-  transform: rotate(360deg);
 }
 
 .icon {
@@ -332,19 +366,32 @@ footer .fa-solid {
   color: #99e2d0;
 }
 
-legend {
+.form input {
+  position: absolute;
+  left: -9999px;
+}
+
+.form input[type="checkbox"]:checked + label .icon {
+  margin-right: 0px;
+}
+
+.form input[type="checkbox"]:checked + label .icon > i {
+  transform: rotate(360deg);
+}
+
+.legend {
   position: relative;
   padding-left: 10px;
 }
 
-legend > h3 {
+.legend > h3 {
   position: relative;
   text-transform: uppercase;
   font-weight: 300;
   margin-bottom: 23px;
 }
 
-.green-underline {
+.legend__underline {
   position: absolute;
   border-bottom: 4px #99e2d0 solid;
   width: 50px;
@@ -376,33 +423,9 @@ fieldset {
   gap: 25px;
 }
 
-#how-to li {
-  width: 100%;
-  height: 80px;
-  border-radius: 20px;
-  background-color: whitesmoke;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 0;
-}
-
 #how-to .fa-solid {
   position: absolute;
   left: 10%;
-}
-
-#how-to .round-border {
-  height: 3rem;
-  width: 3rem;
-  background-color: #9356dc;
-  color: white;
-  position: absolute;
-  left: -16px;
-  border-radius: 50px;
-  text-align: center;
-  line-height: 1.5;
 }
 
 #presentation {
@@ -428,14 +451,14 @@ fieldset {
   line-height: 0;
 }
 
-.search__dot {
-  position: relative;
-  right: 10px;
-}
-
 #search .container {
   padding: 0px 15px 0px 15px;
   /* no more up nor bottom */
+}
+
+.search__dot {
+  position: relative;
+  right: 10px;
 }
 
 /* RESTAURANTS CARDS ---------------- */
@@ -470,7 +493,7 @@ a.full-size {
 
 .article__image {
   object-fit: cover;
-  height: 70%;
+  height: 200px;
   width: 100%;
   /* align-self: flex-start; */
   flex: 1 1 auto;
@@ -478,7 +501,7 @@ a.full-size {
 }
 
 .article__bottom {
-  height: 30%;
+  height: 8rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -493,9 +516,17 @@ a.full-size {
       flex: 1 1 auto; */
 }
 
-.article__heart {
+#restaurants .article-heart {
   padding-right: 30px;
   font-size: 2.6rem;
+  cursor: default;
+}
+
+#menu {
+  background-color: whitesmoke;
+  border-radius: 45px 45px 0 0;
+  position: relative;
+  top: -45px;
 }
 
 #menu .container {
@@ -507,7 +538,7 @@ a.full-size {
   padding-bottom: 15px;
 }
 
-.menu__header {
+#menu .menu__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -526,13 +557,6 @@ a.full-size {
   background-size: cover;
   height: 300px;
   width: 100%;
-}
-
-#menu {
-  background-color: whitesmoke;
-  border-radius: 45px 45px 0 0;
-  position: relative;
-  top: -45px;
 }
 
 .puzzle {

@@ -1,22 +1,26 @@
-#menu .container {
-  padding-top: 0px;
-  /* display: flex;
+#menu {
+  background-color: rgb(245, 245, 245);
+  border-radius: 45px 45px 0 0;
+  position: relative;
+  top: -45px;
+  & .container {
+    padding-top: 0px;
+    /* display: flex;
     flex-direction: column;
     align-content: space-between;
     gap: 10px; */
-  padding-bottom: 15px;
-}
-
-.menu__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#menu h1 {
-  font-family: "Shrikhand", cursive;
-  font-size: 3.5rem;
-  padding: 30px 0px 30px 10px;
+    padding-bottom: 15px;
+  }
+  & .menu__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  & h1 {
+    font-family: "Shrikhand", cursive;
+    font-size: 3.5rem;
+    padding: 30px 0px 30px 10px;
+  }
 }
 
 .background-image {
@@ -26,13 +30,6 @@
   background-size: cover;
   height: 300px;
   width: 100%;
-}
-
-#menu {
-  background-color: rgb(245, 245, 245);
-  border-radius: 45px 45px 0 0;
-  position: relative;
-  top: -45px;
 }
 
 .puzzle {

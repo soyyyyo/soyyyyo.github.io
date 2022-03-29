@@ -1,18 +1,18 @@
-header img {
-  margin: 30px 0 20px 0;
-}
-
-header nav {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 0;
-}
-
-.back {
-  position: absolute;
-  left: 32px;
-  top: 32px;
-  font-size: 3rem;
+header {
+  & img {
+    margin: 30px 0 20px 0;
+  }
+  & nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+  }
+  & .btn--back {
+    position: absolute;
+    left: 32px;
+    top: 32px;
+    font-size: 3rem;
+  }
 }

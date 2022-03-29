@@ -1,4 +1,4 @@
-.button-purple {
+.btn--main {
   color: white;
   background-color: $clr-pri;
   padding: 1.3rem 2rem;
@@ -10,19 +10,51 @@
   margin: auto;
   /* user agent */
   border-style: none;
-  display: block;
 }
 
-.button-new {
+.btn--round {
+  height: 3.5rem;
+  width: 3.5rem;
+  background-color: $clr-pri;
+  color: white;
+  position: absolute;
+  left: -16px;
+  border-radius: 50px;
+  @include center;
+}
+
+.btn--rectangle {
+  width: 100%;
+  height: 80px;
+  border-radius: 20px;
+  background-color: rgb(245, 245, 245);
+  position: relative;
+  @include center;
+}
+
+.btn--new {
   position: absolute;
   top: 0;
   right: 0;
-  color: $clr-ter;
-  background-color: #99e2d0;
+  color: rgb(255, 255, 255);
+  background-color: $clr-ter;
   padding: 8px;
   border-radius: 5px;
   margin: 15px 15px 0 0;
   font-size: 1.6rem;
+}
+
+// coeur dans la page index
+$heart-size-card: 3.5rem;
+
+.article__card {
+  position: relative;
+  & .heart {
+    position: absolute;
+    bottom: (8rem/2-$heart-size-card/2);
+    right: 30px;
+    font-size: $heart-size-card;
+  }
 }
 
 #menu .fa-heart {
@@ -32,9 +64,8 @@
 
 .heart {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-content: center;
+  line-height: 0;
+  @include center;
   &--empty {
     color: black;
     position: relative;
@@ -51,9 +82,17 @@
   &__input {
     position: absolute;
     left: -9999px;
+    animation-direction: alternate;
     &:checked + label .heart--full {
       opacity: 100;
       transition-duration: 500ms;
     }
+    &:not(:checked) + label .heart--full {
+      opacity: 0;
+      transition-duration: 500ms;
+    }
+  }
+  & label {
+    height: min-content;
   }
 }

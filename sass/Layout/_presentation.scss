@@ -1,12 +1,11 @@
 #presentation {
   background-color: rgb(245, 245, 245);
-}
-
-#presentation > .container {
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
-  align-items: center;
-  gap: 25px;
-  text-align: center;
+  & > .container {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+  }
 }
