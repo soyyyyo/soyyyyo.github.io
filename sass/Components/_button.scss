@@ -1,6 +1,8 @@
+$light-clr-pri: lighten($clr-pri, 2%);
+$light-clr-sec: lighten($clr-sec, 2%);
+
 .btn--main {
   color: white;
-  background-color: $clr-pri;
   padding: 1.3rem 2rem;
   border-radius: 25px;
   background: linear-gradient(to bottom right, $clr-sec, $clr-pri);
@@ -10,6 +12,15 @@
   margin: auto;
   /* user agent */
   border-style: none;
+  cursor: pointer;
+  &:hover {
+    background: linear-gradient(
+      to bottom right,
+      $light-clr-sec,
+      $light-clr-pri
+    );
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  }
 }
 
 .btn--round {
@@ -30,6 +41,16 @@
   background-color: rgb(245, 245, 245);
   position: relative;
   @include center;
+  &:hover {
+    background-color: rgb(249, 249, 249);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    & .btn--round {
+      transform: scale(1.1);
+    }
+    & .fa-solid {
+      transform: scale(1.2);
+    }
+  }
 }
 
 .btn--new {
@@ -94,5 +115,6 @@ $heart-size-card: 3.5rem;
   }
   & label {
     height: min-content;
+    cursor: pointer;
   }
 }

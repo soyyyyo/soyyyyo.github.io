@@ -11,6 +11,10 @@ footer {
   }
   & a {
     color: white;
+    &:hover {
+      color: darken($color: white, $amount: 40);
+      transform: scale(1.1);
+    }
   }
   & ul {
     font-size: 1.5rem;

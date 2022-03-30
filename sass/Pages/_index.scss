@@ -4,49 +4,49 @@ $rotor-dur: $spinner-dur/3;
 $rotor-del: $spinner-dur/3;
 $rotor-bez: ease-in-out;
 
-.spinner {
-  z-index: 5;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  @include center;
-  animation: hide-me ($rotor-dur $rotor-del * 3) ease-in-out both;
-  &__box {
-    @include center;
-    width: $spinner-logo-size;
-    height: $spinner-logo-size;
-    color: white;
-    position: relative;
-    animation: spinner 3s ease-in-out backwards;
-  }
-  & .phone {
-    font-size: $spinner-logo-size;
-    color: $clr-pri;
-    visibility: hidden;
-    animation: rotor-out $rotor-dur $rotor-bez backwards,
-      rotor-in $rotor-dur $rotor-del * 3 $rotor-bez;
-  }
-  & .list {
-    color: $clr-pri;
-    opacity: 1;
-    position: absolute;
-    font-size: $spinner-logo-size/2.66;
-    left: 30%;
-    top: 20%;
-    visibility: hidden;
-    animation: rotor-out $rotor-dur $rotor-bez backwards,
-      rotor-in $rotor-dur $rotor-del * 3 $rotor-bez;
-  }
-  & .store {
-    color: $clr-pri;
-    font-size: $spinner-logo-size;
-    visibility: hidden;
-    animation: rotor-in $rotor-dur $rotor-del $rotor-bez backwards,
-      rotor-out $rotor-dur $rotor-del * 2 $rotor-bez;
-    position: absolute;
-  }
-}
+// .spinner {
+//   z-index: 5;
+//   position: fixed;
+//   width: 100%;
+//   height: 100%;
+//   background-color: white;
+//   @include center;
+//   animation: hide-me ($rotor-dur $rotor-del * 3) ease-in-out both;
+//   &__box {
+//     @include center;
+//     width: $spinner-logo-size;
+//     height: $spinner-logo-size;
+//     color: white;
+//     position: relative;
+//     animation: spinner 3s ease-in-out backwards;
+//   }
+//   & .phone {
+//     font-size: $spinner-logo-size;
+//     color: $clr-pri;
+//     visibility: hidden;
+//     animation: rotor-out $rotor-dur $rotor-bez backwards,
+//       rotor-in $rotor-dur $rotor-del * 3 $rotor-bez;
+//   }
+//   & .list {
+//     color: $clr-pri;
+//     opacity: 1;
+//     position: absolute;
+//     font-size: $spinner-logo-size/2.66;
+//     left: 30%;
+//     top: 20%;
+//     visibility: hidden;
+//     animation: rotor-out $rotor-dur $rotor-bez backwards,
+//       rotor-in $rotor-dur $rotor-del * 3 $rotor-bez;
+//   }
+//   & .store {
+//     color: $clr-pri;
+//     font-size: $spinner-logo-size;
+//     visibility: hidden;
+//     animation: rotor-in $rotor-dur $rotor-del $rotor-bez backwards,
+//       rotor-out $rotor-dur $rotor-del * 2 $rotor-bez;
+//     position: absolute;
+//   }
+// }
 
 $gravity-del: 80ms;
 $ball-size: $spinner-logo-size/8;

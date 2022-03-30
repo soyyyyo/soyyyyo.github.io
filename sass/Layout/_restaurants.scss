@@ -33,9 +33,33 @@ a.full-size {
   object-fit: cover;
   height: 200px;
   width: 100%;
+  object-position: center;
   /* align-self: flex-start; */
   flex: 1 1 auto;
   border-radius: 20px 20px 0 0;
+  animation: image-scroll 20s ease-in-out infinite;
+  animation-play-state: paused;
+  &:hover {
+    animation-play-state: running;
+  }
+  &:not:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes image-scroll {
+  0% {
+    object-position: center;
+  }
+  33% {
+    object-position: top;
+  }
+  66% {
+    object-position: bottom;
+  }
+  100% {
+    object-position: center;
+  }
 }
 
 .article__bottom {
