@@ -607,35 +607,210 @@ a.full-size {
 }
 
 .spinner {
-  color: white;
   z-index: 5;
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   line-height: "";
-  font-size: 30rem;
+  animation: hide-me 0.9s 2.7s ease-in-out both;
+}
+
+.spinner__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: "";
+  width: 16rem;
+  height: 16rem;
+  color: white;
+  position: relative;
+  animation: spinner 3s ease-in-out backwards;
+}
+
+.spinner .phone {
+  font-size: 16rem;
+  color: #9356dc;
+  visibility: hidden;
+  animation: rotor-out 0.9s ease-in-out backwards, rotor-in 0.9s 2.7s ease-in-out;
 }
 
 .spinner .list {
-  opacity: 0.5;
+  color: #9356dc;
+  opacity: 1;
+  position: absolute;
+  font-size: 6.01504rem;
+  left: 30%;
+  top: 20%;
+  visibility: hidden;
+  animation: rotor-out 0.9s ease-in-out backwards, rotor-in 0.9s 2.7s ease-in-out;
 }
 
 .spinner .store {
-  opacity: 0.5;
+  color: #9356dc;
+  font-size: 16rem;
+  visibility: hidden;
+  animation: rotor-in 0.9s 0.9s ease-in-out backwards, rotor-out 0.9s 1.8s ease-in-out;
+  position: absolute;
+}
+
+.gravity__box--rev--1 {
+  position: absolute;
+  height: 20.8rem;
+  width: 20.8rem;
+  animation: gravity 3.51s 80ms ease-in-out backwards;
+}
+
+.gravity__box--rev--1 > div {
+  height: 2rem;
+  width: 2rem;
+  background: #99e2d0;
+  border-radius: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.gravity__box--rev--2 {
+  position: absolute;
+  height: 20.1rem;
+  width: 20.1rem;
+  animation: gravity 3.51s 160ms ease-in-out backwards;
+}
+
+.gravity__box--rev--2 > div {
+  height: 1rem;
+  width: 1rem;
+  background: #99e2d0;
+  border-radius: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.gravity__box--rev--3 {
+  position: absolute;
+  height: 19.4rem;
+  width: 19.4rem;
+  animation: gravity 3.51s 240ms ease-in-out backwards;
+}
+
+.gravity__box--rev--3 > div {
+  height: 0.66667rem;
+  width: 0.66667rem;
+  background: #99e2d0;
+  border-radius: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.gravity__box--1 {
+  position: absolute;
+  height: 20.8rem;
+  width: 20.8rem;
+  animation: gravity 3.51s 80ms ease-in-out backwards;
+}
+
+.gravity__box--1 > div {
+  height: 2rem;
+  width: 2rem;
+  background: #99e2d0;
+  border-radius: 50px;
+}
+
+.gravity__box--2 {
+  position: absolute;
+  height: 20.1rem;
+  width: 20.1rem;
+  animation: gravity 3.51s 160ms ease-in-out backwards;
+}
+
+.gravity__box--2 > div {
+  height: 1rem;
+  width: 1rem;
+  background: #99e2d0;
+  border-radius: 50px;
+}
+
+.gravity__box--3 {
+  position: absolute;
+  height: 19.4rem;
+  width: 19.4rem;
+  animation: gravity 3.51s 240ms ease-in-out backwards;
+}
+
+.gravity__box--3 > div {
+  height: 0.66667rem;
+  width: 0.66667rem;
+  background: #99e2d0;
+  border-radius: 50px;
+}
+
+@keyframes gravity {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    transform: rotatez(360deg);
+  }
 }
 
 @keyframes spinner {
   0% {
     visibility: visible;
-    background-color: red;
+    transform: scale(0.8);
+  }
+  20% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform: scale(0.9);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(0.9);
   }
   100% {
     visibility: visible;
-    background-color: blue;
+    transform: scale(1);
+  }
+}
+
+@keyframes rotor-out {
+  0% {
+    transform: rotatey(0deg);
+    visibility: visible;
+  }
+  100% {
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes rotor-in {
+  0% {
+    transform: rotateY(90deg);
+    visibility: hidden;
+  }
+  100% {
+    transform: rotatey(0deg);
+    visibility: visible;
+  }
+}
+
+@keyframes hide-me {
+  99% {
+    opacity: 1;
+    z-index: 5;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
   }
 }
 
