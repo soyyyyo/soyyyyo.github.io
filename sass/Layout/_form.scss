@@ -121,7 +121,7 @@ $anim-total: $anim-duration + $anim-pre-delay + ($anim-delay * 3);
     animation: slow-appear $anim-duration backwards;
   }
   &__animation {
-    @for $i from 1 to 10 {
+    @for $i from 1 to 11 {
       &--#{$i} {
         animation-delay: $anim-pre-delay + ($anim-delay * $i);
       }

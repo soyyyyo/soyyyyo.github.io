@@ -463,6 +463,10 @@ fieldset {
   animation-delay: 3400ms;
 }
 
+#menu .form__animation--10 {
+  animation-delay: 3700ms;
+}
+
 @keyframes slow-appear {
   0% {
     opacity: 0;
@@ -657,11 +661,62 @@ a.full-size {
   cursor: default;
 }
 
+.spinner {
+  z-index: 5;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: "";
+  animation: hide-me 3.2s 400ms ease-in-out both;
+}
+
+.spinner__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: "";
+  width: 16rem;
+  height: 16rem;
+  color: white;
+  position: relative;
+  animation: spinner 3s ease-in-out backwards;
+}
+
+.spinner .phone {
+  font-size: 16rem;
+  color: #9356dc;
+  visibility: hidden;
+  animation: rotor-out 0.8s ease-in-out backwards, rotor-in 0.8s 2.4s ease-in-out;
+}
+
+.spinner .list {
+  color: #9356dc;
+  opacity: 1;
+  position: absolute;
+  font-size: 6.01504rem;
+  left: 30%;
+  top: 20%;
+  visibility: hidden;
+  animation: rotor-out 0.8s ease-in-out backwards, rotor-in 0.8s 2.4s ease-in-out;
+}
+
+.spinner .store {
+  color: #9356dc;
+  font-size: 16rem;
+  visibility: hidden;
+  animation: rotor-in 0.8s 0.8s ease-in-out backwards, rotor-out 0.8s 1.6s ease-in-out;
+  position: absolute;
+}
+
 .gravity__box--rev--1 {
   position: absolute;
   height: 20.8rem;
   width: 20.8rem;
-  animation: gravity 3.51s 80ms ease-in-out backwards;
+  animation: gravity 3.12s 80ms ease-in-out backwards;
 }
 
 .gravity__box--rev--1 > div {
@@ -678,7 +733,7 @@ a.full-size {
   position: absolute;
   height: 20.1rem;
   width: 20.1rem;
-  animation: gravity 3.51s 160ms ease-in-out backwards;
+  animation: gravity 3.12s 160ms ease-in-out backwards;
 }
 
 .gravity__box--rev--2 > div {
@@ -695,7 +750,7 @@ a.full-size {
   position: absolute;
   height: 19.4rem;
   width: 19.4rem;
-  animation: gravity 3.51s 240ms ease-in-out backwards;
+  animation: gravity 3.12s 240ms ease-in-out backwards;
 }
 
 .gravity__box--rev--3 > div {
@@ -712,7 +767,7 @@ a.full-size {
   position: absolute;
   height: 20.8rem;
   width: 20.8rem;
-  animation: gravity 3.51s 80ms ease-in-out backwards;
+  animation: gravity 3.12s 80ms ease-in-out backwards;
 }
 
 .gravity__box--1 > div {
@@ -726,7 +781,7 @@ a.full-size {
   position: absolute;
   height: 20.1rem;
   width: 20.1rem;
-  animation: gravity 3.51s 160ms ease-in-out backwards;
+  animation: gravity 3.12s 160ms ease-in-out backwards;
 }
 
 .gravity__box--2 > div {
@@ -740,7 +795,7 @@ a.full-size {
   position: absolute;
   height: 19.4rem;
   width: 19.4rem;
-  animation: gravity 3.51s 240ms ease-in-out backwards;
+  animation: gravity 3.12s 240ms ease-in-out backwards;
 }
 
 .gravity__box--3 > div {
@@ -804,7 +859,7 @@ a.full-size {
 }
 
 @keyframes hide-me {
-  99% {
+  80% {
     opacity: 1;
     z-index: 5;
   }
