@@ -9,6 +9,10 @@
     align-items: center;
     justify-content: space-between;
     gap: 25px;
+    @media all and (min-width: 768px) {
+      flex-direction: row;
+      gap: 40px;
+    }
   }
   & .fa-solid {
     position: absolute;

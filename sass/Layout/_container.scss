@@ -2,4 +2,7 @@
   max-width: 768px;
   margin: auto;
   padding: 60px 15px 60px 15px;
+  @media all and (min-width: 768px) {
+    max-width: 1200px;
+  }
 }

@@ -4,8 +4,9 @@
   "description": "3rd project for Open Class Room",
   "main": "index.js",
   "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css --style expanded",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -23,3 +24,6 @@
   },
   "homepage": "https://github.com/soyyyyo/JorisTeychene_3_14032022#readme"
 }
+
+// npm run prefix > goes to prefixed
+// npm run sass > then ctrl C to stop

@@ -21,6 +21,9 @@ $light-clr-sec: lighten($clr-sec, 2%);
     );
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   }
+  @media all and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .btn--round {
@@ -40,6 +43,7 @@ $light-clr-sec: lighten($clr-sec, 2%);
   border-radius: 20px;
   background-color: rgb(245, 245, 245);
   position: relative;
+  padding: 0 5px 0 35px; //avoid collision when shrink
   @include center;
   &:hover {
     background-color: rgb(249, 249, 249);

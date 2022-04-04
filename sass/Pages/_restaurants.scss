@@ -3,6 +3,10 @@
   border-radius: 45px 45px 0 0;
   position: relative;
   top: -45px;
+  @media all and (min-width: 768px) {
+    width: 90%;
+    margin: auto;
+  }
   & .container {
     padding-top: 0px;
     /* display: flex;
@@ -30,12 +34,35 @@
   background-size: cover;
   height: 300px;
   width: 100%;
+  @media all and (min-width: 768px) {
+    height: 400px;
+    animation: coming-in 3s ease-in-out both;
+    margin: auto;
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 85%,
+      transparent 100%
+    );
+  }
+}
+
+@keyframes coming-in {
+  0% {
+    height: 40px;
+  }
+  100% {
+    height: 400px;
+  }
 }
 
 .puzzle {
   position: absolute;
   top: -45px;
+  left: 5%;
   height: 45px;
   width: 100%;
   background-color: rgb(245, 245, 245);
+  @media all and (min-width: 768px) {
+    width: 90%;
+  }
 }

@@ -11,8 +11,30 @@
   }
 }
 
-.search__dot {
+// .search__dot {
+//   position: relative;
+//   right: 10px;
+//   font-size: 2.2rem;
+// }
+
+.search-bar {
   position: relative;
-  right: 10px;
-  font-size: 2.2rem;
+  left: 42px; //can't min-content the input without JS ?
+  & label {
+    position: absolute;
+    left: -9999px;
+  }
+  & input {
+    border: none;
+    background: none;
+    font-size: 2rem;
+  }
+  & button {
+    display: none;
+  }
+  & .dot {
+    position: relative;
+    right: 10px;
+    font-size: 2.2rem;
+  }
 }
