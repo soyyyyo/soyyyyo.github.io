@@ -383,6 +383,7 @@ footer .fa-solid {
   flex-wrap: nowrap;
   cursor: pointer;
   overflow: hidden;
+  width: 100%;
 }
 
 @media all and (min-width: 768px) {
@@ -395,8 +396,8 @@ footer .fa-solid {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
+  width: 70%;
+  flex: 1 1 auto;
   padding: 15px 15px;
 }
 
@@ -404,6 +405,11 @@ footer .fa-solid {
   #menu .form__text {
     align-content: center;
   }
+}
+
+#menu .form__text__container {
+  display: flex;
+  width: 100%;
 }
 
 #menu .form__dish {
@@ -426,29 +432,27 @@ footer .fa-solid {
   overflow: hidden;
 }
 
-@media all and (min-width: 768px) {
-  #menu .form__side_dish {
-    max-width: 85%;
-  }
-}
-
 #menu .form__price {
   font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 15px;
 }
 
 #menu .form__dish, #menu .form__side_dish, #menu .form__price {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 @media all and (min-width: 768px) {
   #menu .form__dish, #menu .form__side_dish, #menu .form__price {
-    font-size: 1.4rem;
+    font-size: 1.26rem;
   }
 }
 
-@media all and (min-width: 920px) {
+@media all and (min-width: 960px) {
   #menu .form__dish, #menu .form__side_dish, #menu .form__price {
-    font-size: 1.6rem;
+    font-size: 1.44rem;
   }
 }
 
@@ -483,7 +487,7 @@ footer .fa-solid {
 }
 
 .form input[type="checkbox"]:checked + label .icon {
-  margin-right: 0px;
+  margin-right: 0rem;
 }
 
 .form input[type="checkbox"]:checked + label .icon > i {
@@ -1000,6 +1004,13 @@ a.full-size {
   100% {
     opacity: 0;
     z-index: -10;
+  }
+}
+
+@keyframes wait {
+  from {
+  }
+  to {
   }
 }
 

@@ -11,21 +11,21 @@ $rotor-bez: ease-in-out;
   height: 100%;
   background-color: white;
   @include center;
-  animation: hide-me ($rotor-dur + $rotor-del * 3) 400ms $rotor-bez both;
+  animation: hide-me ($rotor-dur + $rotor-del * 3) 400ms $rotor-bez both; //400
   &__box {
     @include center;
     width: $spinner-logo-size;
     height: $spinner-logo-size;
     color: white;
     position: relative;
-    animation: spinner 3s $rotor-bez backwards;
+    animation: spinner 3s $rotor-bez backwards; //0
   }
   & .phone {
     font-size: $spinner-logo-size;
     color: $clr-pri;
     visibility: hidden;
     animation: rotor-out $rotor-dur $rotor-bez backwards,
-      rotor-in $rotor-dur $rotor-del * 3 $rotor-bez;
+      rotor-in $rotor-dur $rotor-del * 3 $rotor-bez; // rotor del
   }
   & .list {
     color: $clr-pri;
@@ -36,19 +36,19 @@ $rotor-bez: ease-in-out;
     top: 20%;
     visibility: hidden;
     animation: rotor-out $rotor-dur $rotor-bez backwards,
-      rotor-in $rotor-dur $rotor-del * 3 $rotor-bez;
+      rotor-in $rotor-dur $rotor-del * 3 $rotor-bez; // rotor del
   }
   & .store {
     color: $clr-pri;
     font-size: $spinner-logo-size;
     visibility: hidden;
-    animation: rotor-in $rotor-dur $rotor-del $rotor-bez backwards,
-      rotor-out $rotor-dur $rotor-del * 2 $rotor-bez;
+    animation: rotor-in $rotor-dur $rotor-del $rotor-bez backwards, //rot del
+      rotor-out $rotor-dur $rotor-del * 2 $rotor-bez; // rotor del
     position: absolute;
   }
 }
 
-$gravity-del: 80ms;
+$gravity-del: 80ms; //80ms
 $ball-size: $spinner-logo-size/8;
 
 .gravity {
@@ -61,7 +61,7 @@ $ball-size: $spinner-logo-size/8;
         animation: gravity
           $spinner-dur *
           1.3
-          ($gravity-del * $p)
+          ($gravity-del * $p) //del * p
           $rotor-bez
           backwards;
         & > div {
@@ -83,7 +83,7 @@ $ball-size: $spinner-logo-size/8;
         animation: gravity
           $spinner-dur *
           1.3
-          ($gravity-del * $o)
+          ($gravity-del * $o) // del *o
           $rotor-bez
           backwards;
         & > div {
@@ -162,5 +162,14 @@ $big: 1.1;
   100% {
     opacity: 0;
     z-index: -10;
+  }
+}
+
+@keyframes wait{
+  from{
+
+  }
+  to{
+
   }
 }
