@@ -1,11 +1,4 @@
-.test {
-  background-color: red;
-  .machin {
-    text-align: center;
-    list-style: none;
-    flex-direction: column;
-  }
-}
+
 @mixin lines($lines: 1) {
   display: -webkit-box;
   -webkit-line-clamp: ($lines);

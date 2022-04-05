@@ -4,7 +4,8 @@
   gap: 50px;
   @media all and (min-width: 768px) {
     flex-direction: row;
-    gap: 10px;
+    gap: 15px;
+    flex-wrap: wrap;
   }
   &__cat {
     display: flex;
@@ -12,6 +13,7 @@
     gap: 15px;
     width: 100%;
     border: none;
+    flex: 1 1 30%;
   }
   &__item {
     background-color: white;
@@ -29,7 +31,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
     padding: 15px 15px;
     @media all and (min-width: 768px) {
@@ -76,7 +77,7 @@
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.81, 0.01, 0.17, 0.78);
   & > i {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     background: white;
     border-radius: 50%;
     width: 3.5rem;
@@ -110,12 +111,6 @@
     font-weight: 300;
     margin-bottom: 23px;
   }
-  // &__underline {
-  //   position: absolute;
-  //   border-bottom: 4px $clr-ter solid;
-  //   width: 50px;
-  //   bottom: 15px;
-  // }
 }
 
 fieldset {
