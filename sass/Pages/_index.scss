@@ -11,21 +11,21 @@ $rotor-bez: ease-in-out;
   height: 100%;
   background-color: white;
   @include center;
-  animation: hide-me ($rotor-dur + $rotor-del * 3) 400ms $rotor-bez both; //400
+  animation: hide-me ($rotor-dur + $rotor-del * 3) (400ms +1.5s) $rotor-bez both; //
   &__box {
     @include center;
     width: $spinner-logo-size;
     height: $spinner-logo-size;
     color: white;
     position: relative;
-    animation: spinner 3s $rotor-bez backwards; //0
+    animation: spinner 3s 1.5s $rotor-bez backwards; //
   }
   & .phone {
     font-size: $spinner-logo-size;
     color: $clr-pri;
     visibility: hidden;
-    animation: rotor-out $rotor-dur $rotor-bez backwards,
-      rotor-in $rotor-dur $rotor-del * 3 $rotor-bez; // rotor del
+    animation: rotor-out $rotor-dur 1.5s $rotor-bez backwards, //
+      rotor-in $rotor-dur ($rotor-del * 3 +1.5s) $rotor-bez; //
   }
   & .list {
     color: $clr-pri;
@@ -35,20 +35,20 @@ $rotor-bez: ease-in-out;
     left: 30%;
     top: 20%;
     visibility: hidden;
-    animation: rotor-out $rotor-dur $rotor-bez backwards,
-      rotor-in $rotor-dur $rotor-del * 3 $rotor-bez; // rotor del
+    animation: rotor-out $rotor-dur 1.5s $rotor-bez backwards, //
+      rotor-in $rotor-dur ($rotor-del * 3 + 1.5s) $rotor-bez; //
   }
   & .store {
     color: $clr-pri;
     font-size: $spinner-logo-size;
     visibility: hidden;
-    animation: rotor-in $rotor-dur $rotor-del $rotor-bez backwards, //rot del
-      rotor-out $rotor-dur $rotor-del * 2 $rotor-bez; // rotor del
+    animation: rotor-in $rotor-dur ($rotor-del +1.5s) $rotor-bez backwards, //
+      rotor-out $rotor-dur ($rotor-del * 2 +1.5s) $rotor-bez; //
     position: absolute;
   }
 }
 
-$gravity-del: 80ms; //80ms
+$gravity-del: 80ms; //
 $ball-size: $spinner-logo-size/8;
 
 .gravity {
@@ -61,7 +61,7 @@ $ball-size: $spinner-logo-size/8;
         animation: gravity
           $spinner-dur *
           1.3
-          ($gravity-del * $p) //del * p
+          ($gravity-del * $p +1.5s)//
           $rotor-bez
           backwards;
         & > div {
@@ -83,7 +83,7 @@ $ball-size: $spinner-logo-size/8;
         animation: gravity
           $spinner-dur *
           1.3
-          ($gravity-del * $o) // del *o
+          ($gravity-del * $o +1.5s) //
           $rotor-bez
           backwards;
         & > div {
