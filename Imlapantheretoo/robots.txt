@@ -1,5 +1,5 @@
 User-agent: *
-disallow: /js
-disallow: /includes
-disallow: /img
-disallow: /fonts
+disallow: /js/
+disallow: /includes/
+disallow: /img/
+disallow: /fonts/
