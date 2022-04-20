@@ -7,10 +7,24 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+a,
+button {
+    transition: all .3s ease-in-out;
+    outline: none!important;
+}
 
 a:hover {
     text-decoration: none;
     cursor: pointer;
+}
+
+#page-loading-blocs-notifaction {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 100000;
+    background: #FFFFFF url("img/pageload-spinner.gif") no-repeat center center;
 }
 
 .bloc {
@@ -23,8 +37,6 @@ a:hover {
     -o-background-size: cover;
     background-size: cover;
     position: relative;
-    color: rgba(0, 0, 0, 1); 
-
 }
 
 .bloc .container {
@@ -44,6 +56,22 @@ a:hover {
     padding: 20px 50px;
 }
 
+.bg-center,
+.bg-l-edge,
+.bg-r-edge,
+.bg-t-edge,
+.bg-b-edge,
+.bg-tl-edge,
+.bg-bl-edge,
+.bg-tr-edge,
+.bg-br-edge,
+.bg-repeat {
+    -webkit-background-size: auto!important;
+    -moz-background-size: auto!important;
+    -o-background-size: auto!important;
+    background-size: auto!important;
+}
+
 .bg-repeat {
     background: repeat;
 }
@@ -60,6 +88,180 @@ a:hover {
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+/* .texture-paper::before {
+    background: url("img/texture-paper.png");
+    background-size: 280px 280px;
+} */
+
+.b-parallax {
+    background-attachment: fixed;
+}
+
+.d-bloc {
+    color: black;
+}
+
+.d-bloc button:hover {
+    color: rgba(255, 255, 255, .9);
+}
+
+.d-bloc .icon-round,
+.d-bloc .icon-square,
+.d-bloc .icon-rounded,
+.d-bloc .icon-semi-rounded-a,
+.d-bloc .icon-semi-rounded-b {
+    border-color: rgba(255, 255, 255, .9);
+}
+
+.d-bloc .divider-h span {
+    border-color: rgba(255, 255, 255, .2);
+}
+
+.d-bloc .a-btn,
+.d-bloc .navbar a,
+.d-bloc .navbar-brand,
+.d-bloc a .icon-sm,
+.d-bloc a .icon-md,
+.d-bloc a .icon-lg,
+.d-bloc a .icon-xl,
+.d-bloc h1 a,
+.d-bloc h2 a,
+.d-bloc h3 a,
+.d-bloc h4 a,
+.d-bloc h5 a,
+.d-bloc h6 a,
+.d-bloc p a {
+    color: rgba(255, 255, 255, 1);
+}
+
+.d-bloc .a-btn:hover,
+.d-bloc .navbar a:hover,
+.d-bloc .navbar-brand:hover,
+.d-bloc a:hover .icon-sm,
+.d-bloc a:hover .icon-md,
+.d-bloc a:hover .icon-lg,
+.d-bloc a:hover .icon-xl,
+.d-bloc h1 a:hover,
+.d-bloc h2 a:hover,
+.d-bloc h3 a:hover,
+.d-bloc h4 a:hover,
+.d-bloc h5 a:hover,
+.d-bloc h6 a:hover,
+.d-bloc p a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.d-bloc .navbar-toggle .icon-bar {
+    background: rgba(255, 255, 255, 1);
+}
+
+.d-bloc .btn-wire,
+.d-bloc .btn-wire:hover {
+    color: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 1);
+}
+
+.d-bloc .panel {
+    color: rgba(0, 0, 0, .5);
+}
+
+.d-bloc .panel button:hover {
+    color: rgba(0, 0, 0, .7);
+}
+
+.d-bloc .panel icon {
+    border-color: rgba(0, 0, 0, .7);
+}
+
+.d-bloc .panel .divider-h span {
+    border-color: rgba(0, 0, 0, .1);
+}
+
+.d-bloc .panel .a-btn {
+    color: rgba(0, 0, 0, .6);
+}
+
+.d-bloc .panel .a-btn:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+.d-bloc .panel .btn-wire,
+.d-bloc .panel .btn-wire:hover {
+    color: rgba(0, 0, 0, .7);
+    border-color: rgba(0, 0, 0, .3);
+}
+
+.d-bloc .panel,
+.l-bloc {
+    color: rgba(0, 0, 0, .5);
+}
+
+.d-bloc .panel button:hover,
+.l-bloc button:hover {
+    color: rgba(0, 0, 0, .7);
+}
+
+.l-bloc .icon-round,
+.l-bloc .icon-square,
+.l-bloc .icon-rounded,
+.l-bloc .icon-semi-rounded-a,
+.l-bloc .icon-semi-rounded-b {
+    border-color: rgba(0, 0, 0, .7);
+}
+
+.d-bloc .panel .divider-h span,
+.l-bloc .divider-h span {
+    border-color: rgba(0, 0, 0, .1);
+}
+
+.d-bloc .panel .a-btn,
+.l-bloc .a-btn,
+.l-bloc .navbar a,
+.l-bloc .navbar-brand,
+.l-bloc a .icon-sm,
+.l-bloc a .icon-md,
+.l-bloc a .icon-lg,
+.l-bloc a .icon-xl,
+.l-bloc h1 a,
+.l-bloc h2 a,
+.l-bloc h3 a,
+.l-bloc h4 a,
+.l-bloc h5 a,
+.l-bloc h6 a,
+.l-bloc p a {
+    color: rgba(0, 0, 0, .6);
+}
+
+.d-bloc .panel .a-btn:hover,
+.l-bloc .a-btn:hover,
+.l-bloc .navbar a:hover,
+.l-bloc .navbar-brand:hover,
+.l-bloc a:hover .icon-sm,
+.l-bloc a:hover .icon-md,
+.l-bloc a:hover .icon-lg,
+.l-bloc a:hover .icon-xl,
+.l-bloc h1 a:hover,
+.l-bloc h2 a:hover,
+.l-bloc h3 a:hover,
+.l-bloc h4 a:hover,
+.l-bloc h5 a:hover,
+.l-bloc h6 a:hover,
+.l-bloc p a:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+.l-bloc .navbar-toggle .icon-bar {
+    color: rgba(0, 0, 0, .6);
+}
+
+.d-bloc .panel .btn-wire,
+.d-bloc .panel .btn-wire:hover,
+.l-bloc .btn-wire,
+.l-bloc .btn-wire:hover {
+    color: rgba(0, 0, 0, .7);
+    border-color: rgba(0, 0, 0, .3);
 }
 
 .voffset {
@@ -266,6 +468,13 @@ button {
     border-radius: 40px;
 }
 
+.btn-clean {
+    border: 1px solid rgba(0, 0, 0, .08);
+    border-bottom-color: rgba(0, 0, 0, .1);
+    text-shadow: 0 1px 0 rgba(0, 0, 1, .1);
+    box-shadow: 0 1px 3px rgba(0, 0, 1, .25), inset 0 1px 0 0 rgba(255, 255, 255, .15);
+}
+
 .icon-md {
     font-size: 30px!important;
 }
@@ -276,6 +485,24 @@ button {
 
 .sm-shadow {
     text-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+}
+
+.panel-sq,
+.panel-sq .panel-heading,
+.panel-sq .panel-footer {
+    border-radius: 0;
+}
+
+.panel-rd {
+    border-radius: 30px;
+}
+
+.panel-rd .panel-heading {
+    border-radius: 29px 29px 0 0;
+}
+
+.panel-rd .panel-footer {
+    border-radius: 0 0 29px 29px;
 }
 
 .form-control {
@@ -299,7 +526,7 @@ button {
 }
 
 .showScrollTop {
-    font-size: 16px;
+    font-size: 14px;
     opacity: 1;
 }
 
@@ -424,37 +651,7 @@ label,
 a {
     font-family: "helvetica";
     font-weight: 400;
-    color: black
-    /* that's way too much use of !important man */
-}
-
-h1{
-    background-color: white;
-    width: max-content;
-    padding: 2rem;
-    border-radius: 25px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.last-block > h3
-{
-    background-color: white;
-    width: max-content;
-    padding: 2rem;
-    border-radius: 25px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-a {
-    cursor: pointer;
-}
-
-a:hover{
-    color: white;
+    color: white!important;
 }
 
 .container {
@@ -480,19 +677,18 @@ a:hover{
 }
 
 p {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .tight-width-whitespace {
     max-width: 600px;
     margin: auto auto auto auto;
 }
-/* 
+
 .h1 {
     font-size: 20px;
     font-family: "Open Sans";
-}’ */
-/* n'existe pas */
+}
 
 .cta-hero {
     margin-top: 22px;
@@ -514,15 +710,24 @@ h2 {
 }
 
 h3 {
-    font-size: 16px;
+    font-size: 15px;
     text-transform: uppercase;
     font-weight: 700;
+    color: #333333!important;
 }
 
 .med-width-whitespace {
     max-width: 800px;
     margin: auto auto auto auto;
     box-shadow: 0px 0px 0px #000000;
+}
+
+h1 {
+    color: #333333!important;
+}
+
+h4 {
+    color: #333333!important;
 }
 
 .icons {
@@ -569,6 +774,10 @@ h3 {
     background-color: #F3976C;
 }
 
+.tc-white {
+    color: white!important;
+}
+
 .btn-atomic-tangerine {
     background: #F3976C;
     color: #FFFFFF!important;
@@ -598,6 +807,14 @@ h3 {
 .icon-dark-slate-blue {
     color: #364577!important;
     border-color: #364577!important;
+}
+
+.bg-dots-bg {
+    background-image: url("img/dots-bg.png");
+}
+
+.bg-lines-h2-bg {
+    background-image: url("img/lines-h2-bg.png");
 }
 
 .bg-banniere {
@@ -631,17 +848,18 @@ h3 {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
+
 
 @media (max-width: 991px) {
     .container {
@@ -655,10 +873,6 @@ h3 {
         overflow-x: hidden;
         position: relative;
     }
-    .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
-    }
     .bloc-group,
     .bloc-group .bloc {
         display: block;
@@ -667,8 +881,6 @@ h3 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
     }
 }
 
