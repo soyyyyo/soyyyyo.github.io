@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /* cmb b toggle pannel
 cmd d tout les trucs pareil du fichier
 control g aller a la ligne x */
@@ -225,12 +224,12 @@ section {
   animation-direction: alternate;
 }
 
-.heart__input:checked+label .heart--full {
+.heart__input:checked + label .heart--full {
   opacity: 100;
   transition-duration: 500ms;
 }
 
-.heart__input:not(:checked)+label .heart--full {
+.heart__input:not(:checked) + label .heart--full {
   opacity: 0;
   transition-duration: 500ms;
 }
@@ -441,26 +440,18 @@ footer .fa-solid {
   padding-right: 15px;
 }
 
-#menu .form__dish,
-#menu .form__side_dish,
-#menu .form__price {
+#menu .form__dish, #menu .form__side_dish, #menu .form__price {
   font-size: 1.8rem;
 }
 
 @media all and (min-width: 768px) {
-
-  #menu .form__dish,
-  #menu .form__side_dish,
-  #menu .form__price {
+  #menu .form__dish, #menu .form__side_dish, #menu .form__price {
     font-size: 1.26rem;
   }
 }
 
 @media all and (min-width: 960px) {
-
-  #menu .form__dish,
-  #menu .form__side_dish,
-  #menu .form__price {
+  #menu .form__dish, #menu .form__side_dish, #menu .form__price {
     font-size: 1.44rem;
   }
 }
@@ -476,7 +467,7 @@ footer .fa-solid {
   transition-timing-function: cubic-bezier(0.81, 0.01, 0.17, 0.78);
 }
 
-.icon>i {
+.icon > i {
   font-size: 2.0rem;
   background: white;
   border-radius: 50%;
@@ -495,11 +486,11 @@ footer .fa-solid {
   left: -9999px;
 }
 
-.form input[type="checkbox"]:checked+label .icon {
+.form input[type="checkbox"]:checked + label .icon {
   margin-right: 0rem;
 }
 
-.form input[type="checkbox"]:checked+label .icon>i {
+.form input[type="checkbox"]:checked + label .icon > i {
   transform: rotate(360deg);
 }
 
@@ -508,7 +499,7 @@ footer .fa-solid {
   padding-left: 10px;
 }
 
-.legend>h3 {
+.legend > h3 {
   position: relative;
   text-transform: uppercase;
   font-weight: 300;
@@ -575,16 +566,13 @@ fieldset {
     opacity: 0;
     transform: translatey(20px) scale(0.8);
   }
-
   60% {
     transform: translatey(-10px);
     transform: perspective(300px) rotateX(-3deg);
   }
-
   80% {
     transform: translateY(5px);
   }
-
   100% {
     opacity: 1;
     transform: scale(1);
@@ -615,15 +603,12 @@ fieldset {
   0% {
     width: 10px;
   }
-
   50% {
     width: 120px;
   }
-
   90% {
     width: 47px;
   }
-
   100% {
     width: 50px;
   }
@@ -660,7 +645,7 @@ fieldset {
   background-color: whitesmoke;
 }
 
-#presentation>.container {
+#presentation > .container {
   display: flex;
   flex-direction: column;
   align-content: space-between;
@@ -764,11 +749,9 @@ a.full-size {
     animation: image-scroll 20s ease-in-out infinite;
     animation-play-state: paused;
   }
-
   .article__image:hover {
     animation-play-state: running;
   }
-
   .article__image:not:hover {
     animation-play-state: paused;
   }
@@ -778,15 +761,12 @@ a.full-size {
   0% {
     object-position: center;
   }
-
   33% {
     object-position: top;
   }
-
   66% {
     object-position: bottom;
   }
-
   100% {
     object-position: center;
   }
@@ -870,7 +850,7 @@ a.full-size {
   animation: gravity 3.12s 1580ms ease-in-out backwards;
 }
 
-.gravity__box--rev--1>div {
+.gravity__box--rev--1 > div {
   height: 2rem;
   width: 2rem;
   background: #99e2d0;
@@ -887,7 +867,7 @@ a.full-size {
   animation: gravity 3.12s 1660ms ease-in-out backwards;
 }
 
-.gravity__box--rev--2>div {
+.gravity__box--rev--2 > div {
   height: 1rem;
   width: 1rem;
   background: #99e2d0;
@@ -904,7 +884,7 @@ a.full-size {
   animation: gravity 3.12s 1740ms ease-in-out backwards;
 }
 
-.gravity__box--rev--3>div {
+.gravity__box--rev--3 > div {
   height: 0.66667rem;
   width: 0.66667rem;
   background: #99e2d0;
@@ -921,7 +901,7 @@ a.full-size {
   animation: gravity 3.12s 1580ms ease-in-out backwards;
 }
 
-.gravity__box--1>div {
+.gravity__box--1 > div {
   height: 2rem;
   width: 2rem;
   background: #99e2d0;
@@ -935,7 +915,7 @@ a.full-size {
   animation: gravity 3.12s 1660ms ease-in-out backwards;
 }
 
-.gravity__box--2>div {
+.gravity__box--2 > div {
   height: 1rem;
   width: 1rem;
   background: #99e2d0;
@@ -949,7 +929,7 @@ a.full-size {
   animation: gravity 3.12s 1740ms ease-in-out backwards;
 }
 
-.gravity__box--3>div {
+.gravity__box--3 > div {
   height: 0.66667rem;
   width: 0.66667rem;
   background: #99e2d0;
@@ -960,7 +940,6 @@ a.full-size {
   0% {
     visibility: visible;
   }
-
   100% {
     transform: rotatez(360deg);
   }
@@ -971,23 +950,18 @@ a.full-size {
     visibility: visible;
     transform: scale(0.8);
   }
-
   20% {
     transform: scale(1.1);
   }
-
   40% {
     transform: scale(0.9);
   }
-
   60% {
     transform: scale(1.1);
   }
-
   80% {
     transform: scale(0.9);
   }
-
   100% {
     visibility: visible;
     transform: scale(1);
@@ -999,7 +973,6 @@ a.full-size {
     transform: rotatey(0deg);
     visibility: visible;
   }
-
   100% {
     transform: rotateY(90deg);
   }
@@ -1010,7 +983,6 @@ a.full-size {
     transform: rotateY(90deg);
     visibility: hidden;
   }
-
   100% {
     transform: rotatey(0deg);
     visibility: visible;
@@ -1022,7 +994,6 @@ a.full-size {
     opacity: 1;
     z-index: 5;
   }
-
   100% {
     opacity: 0;
     z-index: -10;
@@ -1030,9 +1001,10 @@ a.full-size {
 }
 
 @keyframes wait {
-  from {}
-
-  to {}
+  from {
+  }
+  to {
+  }
 }
 
 #menu {
@@ -1087,7 +1059,6 @@ a.full-size {
   0% {
     height: 40px;
   }
-
   100% {
     height: 350px;
   }
