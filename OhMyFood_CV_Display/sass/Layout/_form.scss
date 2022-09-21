@@ -1,0 +1,206 @@
+#menu .form {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  @media all and (min-width: 768px) {
+    flex-direction: row;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  &__cat {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    border: none;
+    flex: 1 1 30%;
+  }
+  &__item {
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    cursor: pointer;
+    overflow: hidden;
+    width: 100%;
+    @media all and (min-width: 768px) {
+      height: 80px;
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    flex: 1 1 auto;
+    padding: 15px 15px;
+    @media all and (min-width: 768px) {
+      align-content: center;
+    }
+    &__container {
+      display: flex;
+      width: 100%;
+    }
+  }
+  &__dish {
+    width: 100%;
+    font-weight: 600;
+    @include lines(1);
+  }
+  &__side_dish {
+    max-width: 90%;
+    font-weight: 300;
+    @include lines(2);
+  }
+  &__price {
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+  }
+}
+
+// font sizes of dishes
+#menu .form {
+  &__dish,
+  &__side_dish,
+  &__price {
+    font-size: $text-dish-size;
+    @media all and (min-width: 768px) {
+      font-size: $text-dish-size * 0.7;
+    }
+    @media all and (min-width: 960px) {
+      font-size: $text-dish-size * 0.8;
+    }
+  }
+}
+
+.icon {
+  background: $clr-ter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  margin-right: -8rem;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.81, 0.01, 0.17, 0.78);
+  & > i {
+    font-size: 2.0rem;
+    background: white;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 500ms;
+    transition-delay: 120ms;
+    color: $clr-ter;
+  }
+}
+
+.form input {
+  position: absolute;
+  left: -9999px;
+  &[type="checkbox"]:checked + label .icon {
+    margin-right: 0rem;
+    & > i {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.legend {
+  position: relative;
+  padding-left: 10px;
+  & > h3 {
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 23px;
+  }
+}
+
+fieldset {
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  padding-block-start: 0;
+  padding-block-end: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+// animation d'apparition successive
+
+$anim-pre-delay: 700ms;
+$anim-delay: 300ms;
+$anim-duration: 800ms;
+$anim-total: $anim-duration + $anim-pre-delay + ($anim-delay * 3);
+
+#menu .form {
+  &__item {
+    animation: slow-appear $anim-duration backwards;
+  }
+  &__animation {
+    @for $i from 1 to 11 {
+      &--#{$i} {
+        animation-delay: $anim-pre-delay + ($anim-delay * $i);
+      }
+    }
+  }
+}
+
+@keyframes slow-appear {
+  0% {
+    opacity: 0;
+    transform: translatey(20px) scale(0.8);
+  }
+  60% {
+    transform: translatey(-10px);
+    transform: perspective(300px) rotateX(-3deg);
+  }
+  80% {
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// animation des lignes vertes
+
+.legend {
+  &__underline {
+    position: absolute;
+    border-bottom: 4px $clr-ter solid;
+    width: 50px;
+    bottom: 15px;
+    animation: underline $anim-total ease-in-out backwards;
+  }
+  & .u {
+    @for $i from 0 to 3 {
+      &--#{$i} {
+        animation-delay: ($anim-total - ($anim-pre-delay * 2)) * $i;
+      }
+    }
+  }
+}
+
+@keyframes underline {
+  0% {
+    width: 10px;
+  }
+  50% {
+    width: 120px;
+  }
+  90% {
+    width: 47px;
+  }
+  100% {
+    width: 50px;
+  }
+}
